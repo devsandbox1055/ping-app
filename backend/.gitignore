@@ -1,0 +1,86 @@
+# =========================
+# Python
+# =========================
+
+.venv/
+venv/
+env/
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.pytest_cache/
+.mypy_cache/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# =========================
+# Flutter / Dart
+# =========================
+
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+build/
+
+# Generated
+pubspec.lock
+
+# =========================
+# Android
+# =========================
+
+android/.gradle/
+android/local.properties
+
+# Keystores (IMPORTANT)
+*.jks
+*.keystore
+
+# =========================
+# iOS
+# =========================
+
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+
+# =========================
+# IDE
+# =========================
+
+.idea/
+.vscode/
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Temporary
+# =========================
+
+*.tmp
+*.cache
+
+# =========================
+# Database
+# =========================
+
+*.db
+*.sqlite
+*.sqlite3
