@@ -9,10 +9,10 @@ import psutil
 import win32gui
 import win32process
 
-BACKEND_URL = "http://44.222.208.52:8000"
+BACKEND_URL = "put your backend url here"
 
 
-# ── Palette ──────────────────────────────────────────────────────────────────
+
 BG       = "#0f0f12"
 CARD     = "#1a1a22"
 CARD_IN  = "#0a0a0d"   # darker inset (code box, listbox)
@@ -57,7 +57,7 @@ class CoupleSoftware:
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
         self.root.mainloop()
 
-    # ── helpers ─────────────────────────────────────────────────────────────
+    
 
     def _center(self):
         w, h = 460, 680
@@ -79,12 +79,12 @@ class CoupleSoftware:
         except:
             pass
 
-    # ── build UI ────────────────────────────────────────────────────────────
+    
 
     def _build_ui(self):
         root = self.root
 
-        # ═══ HEADER (fixed height) ═══════════════════════════════════════════
+        
         hdr = tk.Frame(root, bg=ACCENT, height=90)
         hdr.pack(fill=tk.X, side=tk.TOP)
         hdr.pack_propagate(False)
@@ -96,7 +96,7 @@ class CoupleSoftware:
         tk.Label(hdr, text="Stay connected", font=("Segoe UI", 8),
                  bg=ACCENT, fg="#ffe0e5").place(relx=.5, rely=.80, anchor="center")
 
-        # ═══ FOOTER + STATUS BAR (fixed, bottom) ════════════════════════════
+        
         self.status_bar = tk.Label(root, text="● Ready",
             font=("Segoe UI", 8), bg=CARD_IN, fg=DIM, anchor="w", padx=14, pady=5)
         self.status_bar.pack(fill=tk.X, side=tk.BOTTOM)
@@ -105,20 +105,20 @@ class CoupleSoftware:
             font=("Segoe UI", 8), bg=CARD_IN, fg=ACCENT, pady=4)
         footer.pack(fill=tk.X, side=tk.BOTTOM)
 
-        # ═══ BODY (fills everything between header and footer) ═══════════════
+        
         body = tk.Frame(root, bg=BG)
         body.pack(fill=tk.BOTH, expand=True, side=tk.TOP)
 
         P = 12   # outer padding
         G = 8    # gap between cards
 
-        # ── CODE CARD ────────────────────────────────────────────────────────
+        
         code_card = self._card(body)
         code_card.pack(fill=tk.X, padx=P, pady=(P, G))
 
         self._card_title(code_card, "🔑  CONNECTION CODE")
 
-        # inset box for the code
+        
         box = tk.Frame(code_card, bg=CARD_IN)
         box.pack(fill=tk.X, padx=12, pady=(0, 10))
 
@@ -128,7 +128,7 @@ class CoupleSoftware:
             bg=CARD_IN, fg=ACCENT, pady=10)
         self.code_label.pack(fill=tk.X)
 
-        # button row
+        
         btn_row = tk.Frame(code_card, bg=CARD)
         btn_row.pack(fill=tk.X, padx=12, pady=(0, 12))
 
@@ -140,7 +140,7 @@ class CoupleSoftware:
                                   self.copy_code, primary=False)
         self.copy_btn.pack(side=tk.LEFT)
 
-        # ── STATUS CARD ───────────────────────────────────────────────────────
+        
         st_card = self._card(body)
         st_card.pack(fill=tk.X, padx=P, pady=(0, G))
 
@@ -159,7 +159,7 @@ class CoupleSoftware:
             anchor="w", wraplength=330, justify=tk.LEFT)
         self.status_label.pack(side=tk.LEFT, fill=tk.X, expand=True, pady=8)
 
-        # ── GAME DETECTION CARD ───────────────────────────────────────────────
+        
         gm_card = self._card(body)
         gm_card.pack(fill=tk.X, padx=P, pady=(0, G))
 
@@ -181,7 +181,7 @@ class CoupleSoftware:
             font=("Segoe UI", 8), bg=CARD_IN, fg=DIM)
         self.game_status.pack(anchor="w", padx=32, pady=(0, 8))
 
-        # ── MESSAGES CARD (fills remaining space) ─────────────────────────────
+        
         msg_card = self._card(body)
         msg_card.pack(fill=tk.BOTH, expand=True, padx=P, pady=(0, P))
 
@@ -205,7 +205,7 @@ class CoupleSoftware:
         msg_sb.pack(side=tk.RIGHT, fill=tk.Y)
         self.msg_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-    # ── widget factories ─────────────────────────────────────────────────────
+    
 
     @staticmethod
     def _card(parent):
@@ -227,14 +227,12 @@ class CoupleSoftware:
                          bg=bg, fg=fg, activebackground=abg, activeforeground=fg,
                          padx=14, pady=7, relief=tk.FLAT, bd=0, cursor="hand2")
 
-    # ── status bar ───────────────────────────────────────────────────────────
-
+    
     def _set_status(self, text, ok=True):
         self.status_bar.config(text=f"● {text}", fg=GREEN if ok else RED)
         self.root.after(3000,
             lambda: self.status_bar.config(text="● Ready", fg=DIM))
 
-    # ── notifications ────────────────────────────────────────────────────────
 
     def show_notification(self, from_user, message):
         try:
@@ -250,7 +248,6 @@ class CoupleSoftware:
         except:
             pass
 
-    # ── actions ──────────────────────────────────────────────────────────────
 
     def generate_code(self):
         def _do():
@@ -303,7 +300,6 @@ class CoupleSoftware:
         self.show_notification(from_user, message)
         self._set_status(f"Message from {from_user}")
 
-    # ── background services ──────────────────────────────────────────────────
 
     def start_background_services(self):
         if self.user_code and not self.msg_poller_running:
@@ -432,7 +428,7 @@ class CoupleSoftware:
         except:
             pass
 
-    # ── close ────────────────────────────────────────────────────────────────
+    
 
     def _on_close(self):
         self.is_running = False

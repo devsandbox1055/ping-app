@@ -35,7 +35,7 @@ async def get_messages(user_id: str):
 async def clear_messages(user_id: str):
     if user_id in db.user_messages:
         db.user_messages[user_id] = []
-    print(f"🗑️ Cleared messages for {user_id}")
+    print(f"Cleared messages for {user_id}")
     return {"success": True}
 
 @router.delete("/delete-old-messages/{user_id}")
@@ -51,6 +51,6 @@ async def delete_old_messages(user_id: str):
                     old_count += 1
             except:
                 pass
-        print(f"🗑️ Deleted {old_count} old messages for {user_id}")
+        print(f"Deleted {old_count} old messages for {user_id}")
         return {"deleted": old_count}
     return {"deleted": 0}

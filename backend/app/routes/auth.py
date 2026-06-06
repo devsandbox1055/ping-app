@@ -14,13 +14,13 @@ async def generate_code():
         "is_authenticated": False,
         "pc_connected": True
     }
-    print(f"✅ Code generated: {code}")
+    print(f"Code generated: {code}")
     return {"code": code, "message": "Code generated successfully"}
 
 @router.post("/verify-code", response_model=VerifyResponse)
 async def verify_code(request: VerifyCodeRequest):
     code = request.code.upper()
-    print(f"🔍 Verifying code: {code}")
+    print(f"Verifying code: {code}")
     
     if code not in db.active_codes:
         return {"valid": False, "message": "Invalid code"}
@@ -31,7 +31,7 @@ async def verify_code(request: VerifyCodeRequest):
     db.active_codes[code]["is_authenticated"] = True
     db.active_codes[code]["verified_at"] = datetime.now(timezone.utc).isoformat()
     
-    print(f"✅ Code verified: {code}")
+    print(f"Code verified: {code}")
     
     return {
         "valid": True, 
@@ -51,7 +51,7 @@ async def pc_connect(code: str):
     else:
         db.active_codes[code]["pc_connected"] = True
     
-    print(f"💻 PC connected: {code}")
+    print(f"PC connected: {code}")
     return {"success": True, "message": "PC connected"}
 
 @router.get("/check-auth/{code}")
