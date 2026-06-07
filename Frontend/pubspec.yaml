@@ -1,0 +1,39 @@
+name: Ping
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0
+  web_socket_channel: ^2.4.0
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.1
+  intl: ^0.18.1
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/applogo4.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#e94560"    # ← tumhara pink accent color
+  adaptive_icon_foreground: "assets/images/applogo4.png"  # ← tumhara logo
