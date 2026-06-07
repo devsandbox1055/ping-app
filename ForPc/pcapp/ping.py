@@ -15,9 +15,9 @@ BACKEND_URL = "put your backend url here"
 
 BG       = "#0f0f12"
 CARD     = "#1a1a22"
-CARD_IN  = "#0a0a0d"   # darker inset (code box, listbox)
+CARD_IN  = "#0a0a0d"   
 ACCENT   = "#e94560"
-ACCENT2  = "#ff6b7a"   # hover
+ACCENT2  = "#ff6b7a"   
 DIM      = "#888899"
 WHITE    = "#ffffff"
 GREEN    = "#23a55a"
