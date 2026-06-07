@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
 <img src="assets/images/app_logo.png" width="100" height="100" alt="Ping Logo"/>
 
 PING
