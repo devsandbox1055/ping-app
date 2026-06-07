@@ -1,5 +1,5 @@
 <div align="left">
-<img src="assets/images/app_logo.png" width="100" height="100" alt="Ping Logo"/>
+<img src="Images/pic1.jpg"/>
 
 PING
 Gaming? You'll Know.
@@ -20,18 +20,27 @@ She gets it. No more anxiety. No more overthinking. She knows exactly what I'm d
 And if there's a genuine emergency? She hits the Urgent Ping button ,and I get a notification on my PC that cuts through without the game even flickering. No minimize, no disconnect, no losing the match.
 That's it. That's the whole story. Built out of love, fueled by ranked games, and slightly inspired by one too many worried phone calls.
 
+<img src="Images/pic7.jpg">
+
 What is Ping?
 Ping is a real-time couple connectivity system built in three parts:
 PartTechPurpose Mobile AppFlutter (Android)Partner sees live status PC Desktop AppPython + TkinterDetects games, runs silentl  BackendFastAPI (Python)Connects everything
 No accounts. No social media. Just an 8-digit code, and you're connected.
 
-Urgent Ping — The Most Important Feature
-When something is genuinely important, she can send an Urgent Message that:
+<img src="Images/pic2.jpg">
+<img src="Images/pic3.jpg">
 
-~Delivers a notification directly to the PC
-~Does NOT minimize or interrupt the game ← this was the hardest part to build
-~Plays an alert sound that actually gets through
+Urgent Ping = The Most Important Feature
+When something is genuinely important, she can send an Urgent Message that:
+Delivers a notification directly to the PC
+
+<img src="Images/pic4.jpg">‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+~Does NOT minimize or interrupt the game ← this was the hardest part to build‎
+~Plays an alert sound that actually gets through‎
 ~Works in fullscreen exclusive games (Valorant, CS2, GTA V)
+<img src="Images/pic5.jpg">
+
+<img src="Images/pic6.jpg">
 
 
 Code saves automatically. Never enter it again.
