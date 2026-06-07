@@ -25,16 +25,6 @@ Ping is a real-time couple connectivity system built in three parts:
 PartTechPurpose Mobile AppFlutter (Android)Partner sees live status PC Desktop AppPython + TkinterDetects games, runs silentl  BackendFastAPI (Python)Connects everything
 No accounts. No social media. Just an 8-digit code, and you're connected.
 
-
-Features
- Live Activity Detection
-The PC app silently monitors what you're doing and pushes updates to your partner's phone in real-time:
-Status                  What She Sees                   What it Means
-Available               Green Heart                     Not gaming, free to talk 
-Playing Valorant        Red Card,game icon              In game, focused 
-Streaming               LIVE badge, purple gradient     Currently live on stream 
-Gaming + Streaming      Both indicators                 Double busy
-
 Urgent Ping — The Most Important Feature
 When something is genuinely important, she can send an Urgent Message that:
 
@@ -85,28 +75,39 @@ League of Legends, Dota 2
 API Reference
 
 POST/api/generate-codeGenerate pairing code
+
 POST/api/verify-codeAuthenticate mobile
+
 POST/api/pc-connect/{code}Register PC
+
 GET/api/check-auth/{code}Check partner connected
+
 POST/api/activity-statusUpdate game/stream status
+
 GET/api/get-activity/{user_id}Get live activity
+
 POST/api/send-urgent-messageSend urgent ping
+
 GET/api/get-messages/{user_id}Poll messages
+
 DELETE/api/clear-messages/{user_id}Clear messages
 
 
 
 What's Next
 iOS support
+
 More games & streaming software
+
 Auto-start with Windows
+
 Group Activity Support(for gaming groups of friends)
 
 Contributing
 Personal project, but PRs are welcome!
 <div align="center">
 
-Made with ❤️ — for her.
+Made with ❤️ for her.
 She asked for a louder notification sound.
 Apparently, according to her, my hearing isn't exactly great.
 So please bear with it. 😅
