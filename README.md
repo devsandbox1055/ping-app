@@ -1,4 +1,6 @@
 <div align="left">
+thus is my first project on github..so do tell me what i am doing wrong!
+ 
 <img src="Images/pic1.jpg"/>
 
 PING
